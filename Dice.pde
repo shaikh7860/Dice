@@ -1,4 +1,3 @@
-//Dice one;
 int total;
 void setup()
 {
@@ -92,5 +91,3 @@ class Die //models one single dice cube
     
   }
 }
-//for(int y = 5; y<=500; x+=50 )
-//for(int x = 5)
