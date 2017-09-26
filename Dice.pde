@@ -1,19 +1,27 @@
 //Dice one;
+int total;
 void setup()
 {
-  size(600, 600);
+  size(440, 550);
   noLoop();
 }
 void draw()
 {
   //your code here
   background(197);
-  for(int x = 10; x<=400; x+=50 ){
-  for(int y = 10; y<=400; y+=50 ){
-  Die one = new Die(x,y);
-  one.show();
+  total = 0;
+  for (int x = 10; x<=400; x+=50 ) {
+    for (int y = 10; y<=400; y+=50 ) {
+      Die one = new Die(x, y);
+      one.show();
+      total = total+one.i;      
+      // sum = sum + one.value;
+
+      fill(0);
+    }
   }
-  }
+  fill(0);
+    text("Sum of dice"+ total, 350, 300);
 }
 void mousePressed()
 {
@@ -81,6 +89,7 @@ class Die //models one single dice cube
       ellipse(myX+40, myY+25, 10, 10);
       ellipse(myX+10, myY+25, 10, 10);
     }
+    
   }
 }
 //for(int y = 5; y<=500; x+=50 )
